@@ -32,10 +32,7 @@ Bu proje, **Şule Kandak Mimarlık Ofisi** için tasarlanmış modern, estetik v
 ## 🎯 Hedef
 Web sitesi, **Şule Kandak Mimarlık Ofisi’nin yaratıcı vizyonunu** dijitalde gözler önüne sererken, ziyaretçilere unutulmaz bir deneyim sunmayı amaçlar. Modern, fonksiyonel ve etkileşimli tasarım ile kullanıcıyı projelere dahil eder.
 
----
 
-**👩‍💻 Hazırlayan:** Aslı Korkmaz  
-**📅 2025**  
 **🔗 GitHub Repo:** [sule-kandak-mimarlik-sitesi](https://github.com/aslikorkmaz48/sule-kandak-mimarlik-sitesi)
 
 💡 **Kolay gelsin! Şimdi keşfetmeye başlayın!**
