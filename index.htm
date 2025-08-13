@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mimarlık Ofisi - Şule Kandak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --primary: #4B6EAF;
+            --secondary: #E6E9F0;
+            --text: #222;
+            --bg: #fff;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 24px 0 12px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        nav {
+            margin: 18px 0 0 0;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color .2s;
+        }
+        
+        nav a:hover {
+            color: #FFD700;
+        }
+        
+        .hero {
+            background: linear-gradient(90deg, #e6e9f0 0%, #eef1f5 100%);
+            padding: 40px 0 20px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.1em;
+            margin-bottom: 16px;
+        }
+        
+        .hero p {
+            font-size: 1.18em;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto 22px auto;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 32px 0;
+        }
+        
+        .gallery img {
+            width: 270px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #bbb;
+            transition: transform .2s;
+            cursor: pointer;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.045);
+            box-shadow: 0 4px 24px #aaa;
+        }
+        
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 36px 0 18px 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 0 0 36px 0;
+            padding: 0 18px;
+        }
+        
+        .project-card {
+            background: var(--secondary);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px #d4d4d4;
+            padding: 18px;
+            text-align: left;
+            transition: box-shadow .2s, transform .2s;
+            cursor: pointer;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 4px 24px #b0b0b0;
+            transform: translateY(-3px) scale(1.02);
+        }
+        
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.17em;
+            font-weight: 700;
+        }
+        
+        .project-card p {
+            font-size: 1em;
+            color: #444;
+        }
+        
+        .about,
+        .contact {
+            max-width: 650px;
+            margin: 0 auto 38px auto;
+            background: #f8fafc;
+            padding: 24px 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #eee;
+        }
+        
+        .about p,
+        .contact p {
+            font-size: 1.08em;
+            color: #333;
+            margin-bottom: 0;
+        }
+        
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 14px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            background: #fff;
+            resize: vertical;
+        }
+        
+        .contact button {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.08em;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background .2s;
+        }
+        
+        .contact button:hover {
+            background: #335081;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+            font-size: 1.09em;
+            margin-top: 30px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            .gallery img {
+                width: 95vw;
+                height: 160px;
+            }
+            .about,
+            .contact {
+                padding: 18px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Şule Kandak Mimarlık Ofisi</h1>
+        <nav>
+            <a href="#galeri">Galeri</a>
+            <a href="#projeler">Projeler</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Hayalinizdeki Mekanları Tasarlıyoruz</h2>
+        <p>Modern, fonksiyonel ve estetik mimari projelerle yaşam alanlarınızı güzelleştiriyoruz. Konut, ofis, iç mekan ve dış mekan tasarımlarında yenilikçi çözümler sunuyoruz.</p>
+    </section>
+    <div id="galeri" class="section-title">Galeri</div>
+    <div class="gallery">
+        <img src="ic-mimarlik.jpg" alt="İç Mimarlık Projesi" width="600">
+        <img src="mimar.jpg" alt="Mimarlık Projesi" width="600">
+        <img src="mdflam.jpg" alt="MDF Lam Projesi" width="600">
+        <img src="mustakil-apartman.jpg" alt="Müstakil Apartman Projesi" width="600">
+    </div>
+    <div id="projeler" class="section-title">Projeler</div>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Modern Villa</h3>
+            <p>Doğal ışık, geniş yaşam alanları ve minimalist detaylarla tasarlanan modern villa projesi.</p>
+        </div>
+        <div class="project-card">
+            <h3>Ofis Kompleksi</h3>
+            <p>Çalışan motivasyonunu artıran açık ofis düzeni ve sürdürülebilir mimari.</p>
+        </div>
+        <div class="project-card">
+            <h3>Kafe & Restoran</h3>
+            <p>Sıcak atmosfer, özgün dekorasyon ve işlevsel mekan tasarımı ile şehir merkezinde bir buluşma noktası.</p>
+        </div>
+        <div class="project-card">
+            <h3>İç Mekan Tasarımı</h3>
+            <p>Renk, dokunuş ve ışık oyunlarıyla yaşam alanınızı yeniden şekillendiriyoruz.</p>
+        </div>
+    </div>
+    <div id="hakkimizda" class="section-title">Hakkımızda</div>
+    <div class="about">
+        <p>Şule Kandak Mimarlık Ofisi, 2018'den beri yenilikçi projeler ve müşteri odaklı çözümler sunmaktadır. Her bir projede kullanıcı ihtiyaçlarını ve estetiği ön planda tutarak yaşam alanlarını dönüştürüyoruz.</p>
+    </div>
+    <div id="iletisim" class="section-title">İletişim</div>
+    <div class="contact">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Adınız" required>
+            <input type="email" id="email" placeholder="E-posta" required>
+            <textarea id="message" rows="4" placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+            <p id="contactResult" style="color:var(--primary);font-weight:600;margin-top:10px;"></p>
+        </form>
+    </div>
+    <footer>
+        &copy; 2025 Şule Kandak Mimarlık. Tüm hakları saklıdır.
+    </footer>
+    <script>
+        // Basit iletişim formu örneği (backend yok, sadece ön yüz)
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('contactResult').textContent = "Teşekkürler! Mesajınız gönderildi.";
+            setTimeout(() => document.getElementById('contactResult').textContent = "", 3000);
+            this.reset();
+        };
+        // Galeri için modal açma örneği (isteğe bağlı)
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.onclick = function() {
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = 0;
+                modal.style.left = 0;
+                modal.style.width = '100vw';
+                modal.style.height = '100vh';
+                modal.style.background = 'rgba(30,40,60,.8)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = 9999;
+                modal.innerHTML = `<img src="${this.src}" style="max-width:90vw;max-height:80vh;border-radius:16px;box-shadow:0 6px 36px #000;"><span style="position:absolute;top:20px;right:35px;font-size:2.6em;color:#fff;cursor:pointer;font-weight:bold;">&times;</span>`;
+                modal.querySelector('span').onclick = () => document.body.removeChild(modal);
+                document.body.appendChild(modal);
+            }
+        });
+    </script>
+</body>
+
+</html>
